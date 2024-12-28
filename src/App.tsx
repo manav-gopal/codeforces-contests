@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import "@shopify/polaris/build/esm/styles.css";
 
 function App() {
   return (
