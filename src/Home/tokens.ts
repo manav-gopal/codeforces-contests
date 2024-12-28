@@ -16,6 +16,8 @@ export const darkTheme = {
       BEFORE: "#3fb950",
       FINISHED: "#8b949e",
       CODING: "#a371f7",
+      PENDING_SYSTEM_TEST: "#a371f7",
+      SYSTEM_TEST: "#a371f7",
     },
     input: {
       background: "#242424",

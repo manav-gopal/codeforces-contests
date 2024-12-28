@@ -96,9 +96,9 @@ export const TableContainer = styled.div`
     padding: 12px 16px;
     vertical-align: middle;
 
-    &:nth-child(1) { width: 50%; }
+    &:nth-child(1) { width: 45%; }
     &:nth-child(2) { width: 10%; }
-    &:nth-child(3) { width: 15%; }
+    &:nth-child(3) { width: 20%; }
     &:nth-child(4) { width: 15%; }
     &:nth-child(5) { width: 10%; }
   }
