@@ -1,9 +1,8 @@
-import React, { useCallback, useMemo } from 'react';
+import React from 'react';
 import { TextField, Select } from '@shopify/polaris';
 import { StyledFilterContainer } from '../styled';
 import { ContestFilters as ContestFiltersType } from '../types';
-import { ITEMS_PER_PAGE_OPTIONS, CONTEST_TYPE_OPTIONS, SEARCH_DEBOUNCE_MS } from '../constants';
-import debounce from 'lodash/debounce';
+import { ITEMS_PER_PAGE_OPTIONS, CONTEST_TYPE_OPTIONS } from '../constants';
 
 interface ContestFiltersProps extends ContestFiltersType {
   onQueryChange: (value: string) => void;
@@ -19,26 +18,16 @@ export const ContestFilters: React.FC<ContestFiltersProps> = ({
   onTypeChange,
   onLimitChange,
 }) => {
-  const debouncedQueryChange = useMemo(
-    () => debounce(onQueryChange, SEARCH_DEBOUNCE_MS),
-    [onQueryChange]
-  );
-
-  const handleQueryChange = useCallback((value: string) => {
-    debouncedQueryChange(value);
-  }, [debouncedQueryChange]);
-
   return (
     <StyledFilterContainer>
       <TextField
         label="Search contests"
         value={query}
-        onChange={handleQueryChange}
+        onChange={onQueryChange}
         placeholder="Enter contest name..."
         autoComplete="off"
         variant="borderless"
         inputMode='search'
-        
       />
       <Select
         label="Contest type"

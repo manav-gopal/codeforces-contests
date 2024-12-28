@@ -25,5 +25,3 @@ export const DEFAULT_FILTERS: {
   type: "all",
   limit: "20",
 };
-
-export const SEARCH_DEBOUNCE_MS = 300;
